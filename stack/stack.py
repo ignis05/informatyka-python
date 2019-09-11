@@ -1,40 +1,40 @@
 # przykładowa implementacja stosu w pythonie
-
+ 
 import os
-
-
+ 
+ 
 def clear(): return os.system('cls')
-
-
+ 
+ 
 clear()
-
-
+ 
+ 
 class Stack:
     def __init__(self):
         self.items = []
-
+ 
     def isEmpty(self):
         return self.items == []
-
+ 
     def push(self, elem):
         self.items.append(elem)
-
+ 
     def pop(self):
         if self.isEmpty() == False:
             return self.items.pop()
-
+ 
     def peek(self):
         if self.isEmpty() == False:
             return self.items[-1]
-
+ 
     def getSize(self):
         return len(self.items)
-
-
+ 
+ 
 # zastosowanie:
-
+ 
 stack = Stack()
-
+ 
 print('OUTPUT: \n')
 while True:
     print('\n0 - exit')
@@ -44,7 +44,7 @@ while True:
     print('4 - getSize')
     print('5 - isEmpty')
     x = int(input('\nCo checsz zrobic?\n'))
-
+ 
     if x == 1:
         el = input('Podaj wartość do umieszczenia w stacku:\n')
         stack.push(el)
