@@ -27,6 +27,4 @@ final = ''
 for i in key:
     final += ''.join(tab[int(i)])
 
-print(tab)
-print('text oryginalny:\n'+txt_01+'\n')
 print('text zaszyfrowany:\n'+final)

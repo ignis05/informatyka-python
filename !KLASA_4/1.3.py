@@ -10,7 +10,7 @@ key = input("Podaj klucz\n")
 
 
 txt = list(txt_org)
-print(txt)
+# print(txt)
 
 
 tab = []
@@ -20,8 +20,8 @@ for i in key:
 
 partial_length = math.floor(len(txt) / len(key))
 rest = len(txt) % len(key)
-print('length:'+str(partial_length))
-print('rest:'+str(rest))
+# print('length:'+str(partial_length))
+# ('rest:'+str(rest))
 xx = 1
 
 for i in key:
@@ -33,7 +33,7 @@ for i in key:
         tab[int(i)].append(txt[0])
         del txt[0]
 
-print(tab)
+# print(tab)
 
 fin = ''
 for i in range(0, partial_length +1):
@@ -43,4 +43,5 @@ for i in range(0, partial_length +1):
         except:
             xdd='xd'
 
+print('Odszyfrowany text:')
 print(fin)
