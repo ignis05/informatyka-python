@@ -4,12 +4,8 @@ key = '3201'
 txt = ''
 
 # input mode
-txt_01 = input("Podaj text\n")
+txt = input("Podaj text\n")
 key = input("Podaj klucz\n")
-
-for i in txt_01:
-    if i != ' ':
-        txt += i
 
 
 tab = []
