@@ -5,6 +5,9 @@
 inp = 'WLASNE MALE OGNISKO CENNIEJSZE OD STOSU ZLOTA'
 height = 2
 
+inp = input('Podaj text:\n')
+height = int(input('Podaj wysokosc:\n'))
+
 # replace spaces
 inp = inp.replace(' ', '')
 
