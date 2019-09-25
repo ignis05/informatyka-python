@@ -14,30 +14,30 @@ fence = []
 for i in range(0, height):
     fence.append([])
 
+partial_length = math.floor(len(inp) / (height + height - 2))
+rest = len(inp) % (height + height - 2)
 
-partial_length = math.floor(len(inp) / (height + height-2))
-rest = len(inp) % (height + height-2)
-
-print(len(inp))
-print('length:' + str(partial_length))
-print('rest:' + str(rest))
-
-xx = 1
-tab = list(inp)
+lengths = []
 
 for i in range(0, height):
-    p = partial_length
-    if i != 0 and i != len(fence) - 1:
-        p = partial_length * 2
+    lengths.append([])
 
-    for ab in range(0, p):
-        fence[i].append(tab[0])
-        del tab[0]
+index = 0
+direction = 1
 
-    if i + 1 <= rest:
-        fence[i].append(tab[0])
-        del tab[0]
+for x in inp:
+    if index + direction == len(lengths) or index + direction < 0:
+        direction = 0 - direction
+    lengths[index].append(x)
+    index += direction
 
+xx = 0
+for i in range(0, height):
+    for j in range(0, len(lengths[i])):
+        fence[i].append(inp[xx])
+        xx += 1
+
+print('fence:')
 print(fence)
 
 index = 0
